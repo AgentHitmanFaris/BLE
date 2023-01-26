@@ -1,133 +1,133 @@
 # BLE
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/880ed281aff445f890766ccccbe81d7d)](https://www.codacy.com/app/xiaoyaoyou1212/BLE?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xiaoyaoyou1212/BLE&amp;utm_campaign=Badge_Grade) [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://github.com/xiaoyaoyou1212/BLE/blob/master/LICENSE) [![API](https://img.shields.io/badge/API-18%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=18)
+[![ Codacy Badge](https://api.codacy.com/project/badge/Grade/880ed281aff445f890766ccccbe81d7d)](https://www.codacy.com/app/xiaoyaoyou1212/BLE?utm_source=github.com&amp;utm_medium =referral&amp;utm_content=xiaoyaoyou1212/BLE&amp;utm_campaign=Badge_Grade) [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://github. com/xiaoyaoyou1212/BLE/blob/master/LICENSE) [![API](https://img.shields.io/badge/API-18%2B-brightgreen.svg?style=flat)](https:// android-arsenal.com/api?level=18)
 
-**Android BLE基础操作框架，基于回调，操作简单。包含扫描、多连接、广播包解析、服务读写及通知等功能。**
+**Android BLE basic operation framework, based on callback, easy to operate. It includes functions such as scanning, multi-connection, broadcast packet parsing, service reading and writing, and notification . **
 
-- **项目地址：** [https://github.com/xiaoyaoyou1212/BLE](https://github.com/xiaoyaoyou1212/BLE)
+- ** Project address : ** [ https://github.com/xiaoyaoyou1212/BLE](https://github.com/xiaoyaoyou1212/BLE )
 
-- **项目依赖：** `compile 'com.vise.xiaoyaoyou:baseble:2.0.6'`
+- ** Project dependencies : ** `compile ' com.vise .xiaoyaoyou:baseble:2.0.6'`
 
-## 功能
-- **支持多设备连接管理；**
+## function
+- ** Support multi- device connection management ; **
 
-- **支持广播包解析；**
+- ** Support broadcast packet parsing ; **
 
-- **支持自定义扫描过滤条件；**
+- ** Support custom scanning filter conditions ; **
 
-- **支持根据设备名称正则表达式过滤扫描设备；**
+- ** Support filtering scanning devices based on device name regular expressions ; **
 
-- **支持根据设备信号最小值过滤扫描设备；**
+- ** Support filtering scanning devices based on the minimum value of the device signal ; **
 
-- **支持根据设备名称或 MAC 地址列表过滤扫描设备；**
+- ** Support filtering scanning devices based on device name or MAC address list ; **
 
-- **支持根据设备 UUID 过滤扫描设备；**
+- ** Support filtering scanning devices based on device UUID ; **
 
-- **支持根据指定设备名称或 MAC 地址搜索指定设备；**
+- ** Support searching for specified devices based on specified device names or MAC addresses ; **
 
-- **支持连接设备失败重试；**
+- ** Supports retrying on device failure ; **
 
-- **支持操作设备数据失败重试；**
+- ** Support operation device data failure retry ; **
 
-- **支持绑定数据收发通道，同一种能力可绑定多个通道；**
+- ** Support binding data sending and receiving channels, the same capability can bind multiple channels ; **
 
-- **支持注册和取消通知监听；**
+- ** Support registration and cancellation notification monitoring ; **
 
-- **支持配置最大连接数，超过最大连接数时会依据 Lru 算法自动断开最近最久未使用设备；**
+- ** Supports the configuration of the maximum number of connections, when the maximum number of connections is exceeded, it will be based on Lru The algorithm automatically disconnects the device that has not been used for the longest time ; **
 
-- **支持配置扫描、连接和操作数据超时时间；**
+- ** Supports configuration scan, connection and operation data timeout ; **
 
-- **支持配置连接和操作数据重试次数以及重试间隔时间。**
+- ** Support configuration of connection and operation data retry times and retry interval time . **
 
-## 简介
-打造该库的目的是为了简化蓝牙设备接入的流程。该库是 BLE 操作的基础框架，只处理 BLE 设备通信逻辑，不包含具体的数据处理，如数据的分包与组包等。该库提供了多设备连接管理，可配置最大连接数量，并在超过最大连接数时会依据 Lru 算法自动断开最近最久未使用设备。该库还定制了常用的扫描设备过滤规则，也支持自定义过滤规则。该库所有操作都采用回调机制告知上层调用的结果，操作简单，接入方便。
+## Introduction
+building this library is to simplify the process of connecting Bluetooth devices. This library is the basic framework of BLE operation, it only deals with BLE device communication logic, and does not include specific data processing, such as data packetization and grouping. This library provides multi-device connection management, the maximum number of connections can be configured, and when the maximum number of connections is exceeded, it will be based on Lru The algorithm automatically disconnects the device that has not been used for the longest time . The library also customizes commonly used scanning device filtering rules, and also supports custom filtering rules. All operations of the library use a callback mechanism to inform the upper layer of the call result, which is easy to operate and easy to access.
 
-## 版本说明
-[![LatestVersion](https://img.shields.io/badge/LatestVersion-2.0.6-orange.svg)](https://github.com/xiaoyaoyou1212/BLE/blob/master/VERSION.md)
+## Release notes
+[![ LatestVersion](https://img.shields.io/badge/LatestVersion-2.0.6-orange.svg)](https://github.com/xiaoyaoyou1212/BLE/blob/master/VERSION.md)
 
-最新版本更新记录
-- V2.0.6（2018-04-25）
-    - 增加字节数组与整型数转换方法；
-    - 增加间隔扫描的配置；
-    - 增加获取服务、特征值、属性的方法。
+Latest version update record
+- V2.0.6 ( 2018-04-25 )
+-Add byte array and integer conversion method ;
+- Increase the configuration of interval scanning ;
+-Add methods to obtain services, feature values, and attributes .
 
-## 安装包下载
-[BLE_V2.0.6.apk](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/BLE_V2.0.6.apk)
+## Installation package download
+[ BLE_V2.0.6.apk]( https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/BLE_V2.0.6.apk)
 
-## 代码托管
-[![JCenter](https://img.shields.io/badge/JCenter-2.0.6-orange.svg)](https://jcenter.bintray.com/com/vise/xiaoyaoyou/baseble/2.0.6/)
+## code hosting
+[![ JCenter](https://img.shields.io/badge/JCenter-2.0.6-orange.svg)](https://jcenter.bintray.com/com/vise/xiaoyaoyou/baseble/2.0. 6/)
 
-## 常见问题
-[![FAQ](https://img.shields.io/badge/FAQ-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-red.svg)](https://github.com/xiaoyaoyou1212/BLE/blob/master/FAQ.md)
+## FAQ
+[![ FAQ](https://img.shields.io/badge/FAQ-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-red.svg)] (https://github.com/xiaoyaoyou1212/BLE/blob/master/FAQ.md)
 
-## 效果展示
-![BLE效果](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/screenshot.gif)
+## Effect display
+![ BLE effect ](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/screenshot.gif)
 
-## 使用介绍
+## Introduction to use
 
-### 权限配置
-蓝牙操作针对 6.0 以下系统需要配置如下权限：
+### Permission configuration
+Bluetooth operation , the following permissions need to be configured for systems below 6.0 :
 ```
-<uses-permission android:name="android.permission.BLUETOOTH"/>
-<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+<uses-permission android:name =" android.permission.BLUETOOTH " />
+<uses-permission android:name =" android.permission.BLUETOOTH_ADMIN " />
 ```
-而 6.0 以上系统还需要增加模糊定位权限：
+And systems above 6.0 also need to add fuzzy positioning permissions :
 ```
-<uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission-sdk-23 android:name =" android.permission.ACCESS_COARSE_LOCATION " />
 ```
-为了简便操作，库中对蓝牙操作需要的权限都做了相关设置不需要重复设置，但 6.0 以上系统需要动态申请模糊定位权限。
+For the sake of easy operation, the relevant settings for the permissions required for Bluetooth operations have been made in the library without repeated settings, but systems above 6.0 need to dynamically apply for fuzzy positioning permissions .
 
-### 引入 SDK
-在工程 module 的 build.gradle 文件中的 dependencies 中添加如下依赖：
+### Introduce the SDK
+the engineering module build.gradle Add the following dependencies to the dependencies in the file :
 ```
-compile 'com.vise.xiaoyaoyou:baseble:2.0.5'
+compile ' com.vise.xiaoyaoyou :baseble:2.0.5'
 ```
-构建完后就可以直接使用该库的功能了。
+After building, you can directly use the functions of the library .
 
-### 初始化
-在使用该库前需要进行初始化，初始化代码如下所示：
+### Initialization
+using it, and the initialization code is as follows :
 ```
-//蓝牙相关配置修改
-ViseBle.config()
-        .setScanTimeout(-1)//扫描超时时间，这里设置为永久扫描
-        .setConnectTimeout(10 * 1000)//连接超时时间
-        .setOperateTimeout(5 * 1000)//设置数据操作超时时间
-        .setConnectRetryCount(3)//设置连接失败重试次数
-        .setConnectRetryInterval(1000)//设置连接失败重试间隔时间
-        .setOperateRetryCount(3)//设置数据操作失败重试次数
-        .setOperateRetryInterval(1000)//设置数据操作失败重试间隔时间
-        .setMaxConnectCount(3);//设置最大连接设备数量
-//蓝牙信息初始化，全局唯一，必须在应用初始化时调用
-ViseBle.getInstance().init(this);
+// Bluetooth related configuration modification
+ViseBle.config ()
+        .setScanTimeout ( -1)// Scan timeout, here is set to permanent scan
+        .setConnectTimeout (10 * 1000)// connection timeout
+        .setOperateTimeout ( 5 * 1000)// Set data operation timeout
+        .setConnectRetryCount (3)// Set the number of connection failure retries
+        .setConnectRetryInterval (1000)// Set connection failure retry interval
+        .setOperateRetryCount (3)// Set the number of retries for data operation failures
+        .setOperateRetryInterval ( 1000)// Set data operation failure retry interval time
+        .setMaxConnectCount (3);// Set the maximum number of connected devices
+// Bluetooth information initialization, globally unique, must be called when the application is initialized
+ViseBle . getInstance ( ). init (this);
 ```
-初始化可以是在 Application 中也可以是在 MainActivity 中，只需要是在使用蓝牙功能前就行。还有需要注意的是，蓝牙配置必须在蓝牙初始化前进行修改，如果默认配置满足要求也可以不修改配置。
+Initialization can be in Application or in MainActivity In , it only needs to be before using the Bluetooth function. It should also be noted that the Bluetooth configuration must be modified before Bluetooth initialization. If the default configuration meets the requirements, the configuration does not need to be modified .
 
-### 设备扫描
-库中针对设备扫描定义了几种常用过滤规则，如果不满足要求也可以自己定义过滤规则，下面针对库中提供的过滤规则使用方式一一介绍：
+### Device scan
+The library defines several common filtering rules for device scanning. If the requirements are not met, you can also define the filtering rules yourself. The following describes how to use the filtering rules provided in the library :
 
-- 扫描所有设备
+- Scan all devices
 ```
-ViseBle.getInstance().startScan(new ScanCallback(new IScanCallback() {
-    @Override
-    public void onDeviceFound(BluetoothLeDevice bluetoothLeDevice) {
+ViseBle . getInstance ( ). startScan (new ScanCallback (new IScanCallback () {
+@Override
+public void onDeviceFound ( BluetoothLeDevice bluetoothLeDevice ) {
 
-    }
+}
 
-    @Override
-    public void onScanFinish(BluetoothLeDeviceStore bluetoothLeDeviceStore) {
+@Override
+public void onScanFinish ( BluetoothLeDeviceStore bluetoothLeDeviceStore ) {
 
-    }
+}
 
-    @Override
-    public void onScanTimeout() {
+@Override
+public void onScanTimeout ( ) {
 
-    }
+}
 }));
 ```
 
-- 扫描指定设备 MAC 的设备
+- Scan the device for the specified device MAC
 ```
-//该方式是扫到指定设备就停止扫描
+// This method is to stop scanning when scanning to the specified device
 ViseBle.getInstance().startScan(new SingleFilterScanCallback(new IScanCallback() {
     @Override
     public void onDeviceFound(BluetoothLeDevice bluetoothLeDevice) {
@@ -142,32 +142,32 @@ ViseBle.getInstance().startScan(new SingleFilterScanCallback(new IScanCallback()
     @Override
     public void onScanTimeout() {
 
-    }
-}).setDeviceMac(deviceMac));
+}
+} ) .setDeviceMac ( deviceMac ));
 ```
 
-- 扫描指定设备名称的设备
+-Scan for devices with the specified device name
 ```
-//该方式是扫到指定设备就停止扫描
-ViseBle.getInstance().startScan(new SingleFilterScanCallback(new IScanCallback() {
-    @Override
-    public void onDeviceFound(BluetoothLeDevice bluetoothLeDevice) {
+// This method is to stop scanning when scanning to the specified device
+ViseBle . getInstance ( ). startScan (new SingleFilterScanCallback (new IScanCallback () {
+@Override
+public void onDeviceFound ( BluetoothLeDevice bluetoothLeDevice ) {
 
-    }
+}
 
-    @Override
-    public void onScanFinish(BluetoothLeDeviceStore bluetoothLeDeviceStore) {
+@Override
+public void onScanFinish ( BluetoothLeDeviceStore bluetoothLeDeviceStore ) {
 
-    }
+}
 
-    @Override
-    public void onScanTimeout() {
+@Override
+public void onScanTimeout ( ) {
 
-    }
-}).setDeviceName(deviceName));
+}
+} ) .setDeviceName ( deviceName ));
 ```
 
-- 扫描指定 UUID 的设备
+-Scan for devices with the specified UUID
 ```
 ViseBle.getInstance().startScan(new UuidFilterScanCallback(new IScanCallback() {
     @Override
@@ -183,13 +183,33 @@ ViseBle.getInstance().startScan(new UuidFilterScanCallback(new IScanCallback() {
     @Override
     public void onScanTimeout() {
 
-    }
-}).setUuid(uuid));
+}
+} ) .setUuid ( uuid ));
 ```
 
-- 扫描指定设备 MAC 或名称集合的设备
+-Scan for devices that specify a set of device MACs or names
 ```
-ViseBle.getInstance().startScan(new ListFilterScanCallback(new IScanCallback() {
+ViseBle . getInstance ( ). startScan (new ListFilterScanCallback (new IScanCallback () {
+@Override
+public void onDeviceFound ( BluetoothLeDevice bluetoothLeDevice ) {
+
+}
+
+@Override
+public void onScanFinish ( BluetoothLeDeviceStore bluetoothLeDeviceStore ) {
+
+}
+
+@Override
+public void onScanTimeout ( ) {
+
+}
+} ).setDeviceMacList (deviceMacList).setDeviceNameList(deviceNameList));
+```
+
+-Scan for devices with a specified signal range or device canonical name
+```
+ViseBle . getInstance ( ). startScan (new RegularFilterScanCallback (new IScanCallback () {
     @Override
     public void onDeviceFound(BluetoothLeDevice bluetoothLeDevice) {
 
@@ -204,75 +224,55 @@ ViseBle.getInstance().startScan(new ListFilterScanCallback(new IScanCallback() {
     public void onScanTimeout() {
 
     }
-}).setDeviceMacList(deviceMacList).setDeviceNameList(deviceNameList));
+} ) .setDeviceRssi ( rssi ) .setRegularDeviceName ( regularDeviceName ));
 ```
 
-- 扫描指定信号范围或设备正则名称的设备
+The scanned device list is managed by ` BluetoothLeDeviceStore` , and the individual device information is put into ` BluetoothLeDevice` , which contains all the information of the device, such as device name, device address, broadcast packet analysis information, etc., and related information of the device The information will be introduced in the device details .
+
+### Device connection
+There are three ways of device connection, one is to connect directly according to the device information, and the other two are to scan and connect directly through the device name or device MAC without scanning. The three connection methods are used as follows :
+
+- Connect the device according to the device information
 ```
-ViseBle.getInstance().startScan(new RegularFilterScanCallback(new IScanCallback() {
-    @Override
-    public void onDeviceFound(BluetoothLeDevice bluetoothLeDevice) {
+ViseBle.getInstance ( ) .connect ( bluetoothLeDevice , new IConnectCallback () {
+@Override
+public void onConnectSuccess ( DeviceMirror deviceMirror ) {
 
-    }
+}
 
-    @Override
-    public void onScanFinish(BluetoothLeDeviceStore bluetoothLeDeviceStore) {
+@Override
+public void onConnectFailure ( BleException exception) {
 
-    }
+}
 
-    @Override
-    public void onScanTimeout() {
+@Override
+public void onDisconnect ( boolean isActive ) {
 
-    }
-}).setDeviceRssi(rssi).setRegularDeviceName(regularDeviceName));
-```
-
-其中扫描到的设备列表由 `BluetoothLeDeviceStore` 管理，而单个设备信息都统一放到`BluetoothLeDevice`中，其中包含了设备的所有信息，如设备名称、设备地址、广播包解析信息等，设备的相关信息会在设备详情中进行介绍。
-
-### 设备连接
-设备连接有三种方式，一种是根据设备信息直接进行连接，另外两种是在没扫描的情况下直接通过设备名称或设备 MAC 进行扫描连接。三种连接方式使用如下：
-
-- 根据设备信息连接设备
-```
-ViseBle.getInstance().connect(bluetoothLeDevice, new IConnectCallback() {
-    @Override
-    public void onConnectSuccess(DeviceMirror deviceMirror) {
-
-    }
-
-    @Override
-    public void onConnectFailure(BleException exception) {
-
-    }
-
-    @Override
-    public void onDisconnect(boolean isActive) {
-
-    }
+}
 });
 ```
 
-- 根据设备 MAC 直接扫描并连接
+- Directly scan and connect according to the device MAC
 ```
-ViseBle.getInstance().connectByMac(deviceMac, new IConnectCallback() {
-    @Override
-    public void onConnectSuccess(DeviceMirror deviceMirror) {
+ViseBle . getInstance ( ). connectByMac ( deviceMac , new IConnectCallback () {
+@Override
+public void onConnectSuccess ( DeviceMirror deviceMirror ) {
 
-    }
+}
 
-    @Override
-    public void onConnectFailure(BleException exception) {
+@Override
+public void onConnectFailure ( BleException exception) {
 
-    }
+}
 
-    @Override
-    public void onDisconnect(boolean isActive) {
+@Override
+public void onDisconnect ( boolean isActive ) {
 
-    }
+}
 });
 ```
 
-- 根据设备名称直接扫描并连接
+- Directly scan and connect according to the device name
 ```
 ViseBle.getInstance().connectByName(deviceName, new IConnectCallback() {
     @Override
@@ -288,35 +288,35 @@ ViseBle.getInstance().connectByName(deviceName, new IConnectCallback() {
     @Override
     public void onDisconnect(boolean isActive) {
 
-    }
+}
 });
 ```
 
-### 设备详情
-#### DEVICE INFO(设备信息)
-- 获取设备名称(Device Name):`bluetoothLeDevice.getName()`；
-- 获取设备地址(Device Address):`bluetoothLeDevice.getAddress()`；
-- 获取设备类别(Device Class):`bluetoothLeDevice.getBluetoothDeviceClassName()`；
-- 获取主要设备类别(Major Class):`bluetoothLeDevice.getBluetoothDeviceMajorClassName()`；
-- 获取服务类别(Service Class):`bluetoothLeDevice.getBluetoothDeviceKnownSupportedServices()`；
-- 获取配对状态(Bonding State):`bluetoothLeDevice.getBluetoothDeviceBondState()`；
+### Device Details
+#### DEVICE INFO ( device information )
+- Get the device name ( Device Name): ` bluetoothLeDevice.getName ()` ;
+- Get the device address ( Device Address): ` bluetoothLeDevice.getAddress ()` ;
+- Get the device class ( Device Class): ` bluetoothLeDevice.getBluetoothDeviceClassName ()` ;
+- Get the main device class ( Major Class): ` bluetoothLeDevice.getBluetoothDeviceMajorClassName ()` ;
+- Get service class ( Service Class): `bluetoothLeDevice.getBluetoothDeviceKnownSupportedServices()` ;
+- Get the state of pairing ( Bonding State): ` bluetoothLeDevice.getBluetoothDeviceBondState ()` ;
 
-#### RSSI INFO(信号信息)
-- 获取第一次信号时间戳(First Timestamp):`bluetoothLeDevice.getFirstTimestamp()`；
-- 获取第一次信号强度(First RSSI):`bluetoothLeDevice.getFirstRssi()`；
-- 获取最后一次信号时间戳(Last Timestamp):`bluetoothLeDevice.getTimestamp()`；
-- 获取最后一次信号强度(Last RSSI):`bluetoothLeDevice.getRssi()`；
-- 获取平均信号强度(Running Average RSSI):`bluetoothLeDevice.getRunningAverageRssi()`；
+#### RSSI INFO ( signal information )
+- Get the first signal timestamp ( First Timestamp): ` bluetoothLeDevice.getFirstTimestamp ()` ;
+- Get the first signal strength ( First RSSI): ` bluetoothLeDevice.getFirstRssi ()` ;
+- Get the last signal timestamp ( Last Timestamp): ` bluetoothLeDevice.getTimestamp ()` ;
+- Get the last signal strength ( Last RSSI): ` bluetoothLeDevice.getRssi ()` ;
+- Get the average signal strength ( Running Average RSSI): ` bluetoothLeDevice.getRunningAverageRssi ()` ;
 
-#### SCAN RECORD INFO(广播信息)
-根据扫描到的广播包`AdRecordStore`获取某个广播数据单元`AdRecord`的类型编号`record.getType()`，再根据编号获取广播数据单元的类型描述`record.getHumanReadableType()`以及该广播数据单元的长度及数据内容，最后通过`AdRecordUtil.getRecordDataAsString(record)`将数据内容转换成具体字符串。更多关于广播包解析可以参考[Android BLE学习笔记](http://blog.csdn.net/xiaoyaoyou1212/article/details/51854454)中数据解析部分。
+#### SCAN RECORD INFO ( broadcast information )
+the type number ` record.getType ()` of a broadcast data unit ` AdRecord` according to the scanned broadcast packet ` AdRecordStore` , and then obtain the type description ` record.getHumanReadableType ()` of the broadcast data unit and the broadcast data unit according to the number The length and data content of the data unit, and finally convert the data content into a specific string through ` AdRecordUtil.getRecordDataAsString (record)` . For more information about broadcast packet analysis, please refer to the data analysis section in [Android BLE Study Notes ](http://blog.csdn.net/xiaoyaoyou1212/article/details/51854454) .
 
-### 发送数据
-在发送数据前需要先绑定写入数据通道，绑定通道的同时需要设置写入数据的回调监听，具体代码示例如下：
+### Send data
+Before sending data, you need to bind the write data channel first. When binding the channel, you need to set the callback monitor for writing data. The specific code example is as follows :
 ```
-BluetoothGattChannel bluetoothGattChannel = new BluetoothGattChannel.Builder()
-        .setBluetoothGatt(deviceMirror.getBluetoothGatt())
-        .setPropertyType(PropertyType.PROPERTY_WRITE)
+BluetoothGattChannel bluetoothGattChannel = new BluetoothGattChannel . Builder ()
+        .setBluetoothGatt ( deviceMirror . getBluetoothGatt ())
+        .setPropertyType ( PropertyType . PROPERTY_WRITE )
         .setServiceUUID(serviceUUID)
         .setCharacteristicUUID(characteristicUUID)
         .setDescriptorUUID(descriptorUUID)
@@ -334,12 +334,12 @@ deviceMirror.bindChannel(new IBleCallback() {
 }, bluetoothGattChannel);
 deviceMirror.writeData(data);
 ```
-这里的 deviceMirror 在设备连接成功后就可以获取到，需要注意的是，服务一样的情况下写入数据的通道只需要注册一次，如果写入数据的通道有多个则可以绑定多个。写入数据必须要在绑定写入数据通道后进行，可以在不同的地方多次写入。
+here deviceMirror It can be obtained after the device is successfully connected. It should be noted that the channel for writing data only needs to be registered once when the service is the same. If there are multiple channels for writing data, multiple channels can be bound. Writing data must be done after binding the write data channel, and it can be written multiple times in different places.
 
-### 接收数据
-与发送数据一样，接收设备发送的数据也需要绑定接收数据通道，这里有两种方式，一种是可通知方式、一种是指示器方式，使用方式如下：
+### Receive data
+like sending data, the data sent by the receiving device also needs to bind the receiving data channel. There are two ways here, one is the notification method and the other is the indicator method. The usage is as follows :
 
-- 可通知方式
+-Can be notified
 ```
 BluetoothGattChannel bluetoothGattChannel = new BluetoothGattChannel.Builder()
         .setBluetoothGatt(deviceMirror.getBluetoothGatt())
@@ -384,33 +384,33 @@ deviceMirror.bindChannel(new IBleCallback() {
 }, bluetoothGattChannel);
 deviceMirror.registerNotify(true);
 ```
-在绑定通道后需要注册通知，并需要在收到注册成功的回调时调用如下代码设置监听：
+After binding the channel, you need to register for the notification, and you need to call the following code to set up the listener when you receive the registration success callback :
 ```
-deviceMirror.setNotifyListener(bluetoothGattInfo.getGattInfoKey(), new IBleCallback() {
-    @Override
-    public void onSuccess(byte[] data, BluetoothGattChannel bluetoothGattChannel, BluetoothLeDevice bluetoothLeDevice) {
+deviceMirror.setNotifyListener(bluetoothGattInfo.getGattInfoKey(), new IBleCallback ( ) {
+@Override
+public void onSuccess ( byte[ ] data, BluetoothGattChannel bluetoothGattChannel , BluetoothLeDevice bluetoothLeDevice ) {
 
-    }
+}
 
-    @Override
-    public void onFailure(BleException exception) {
+@Override
+public void onFailure ( BleException exception) {
 
-    }
+}
 });
 ```
-所有设备发送过来的数据都会通过上面的监听得到，如果不想监听也可以取消注册，使用方式如下：
+all devices will be obtained through the above monitoring. If you don’t want to monitor, you can also cancel the registration. The usage is as follows :
 ```
-deviceMirror.unregisterNotify(isIndicate);
+deviceMirror . unregisterNotify ( isIndicate );
 ```
-isIndicate 表示是否是指示器方式。
+isIndicate Indicates whether it is an indicator mode .
 
-### 读取数据
-由于读取设备信息基本每次的通道都不一样，所以这里与上面收发数据有点不一样，每次读取数据都需要绑定一次通道，使用示例如下：
+### read data
+Since the channel for reading device information is basically different every time, it is a bit different from sending and receiving data above. Every time you read data, you need to bind a channel. The usage example is as follows :
 ```
-BluetoothGattChannel bluetoothGattChannel = new BluetoothGattChannel.Builder()
-        .setBluetoothGatt(deviceMirror.getBluetoothGatt())
-        .setPropertyType(PropertyType.PROPERTY_READ)
-        .setServiceUUID(serviceUUID)
+BluetoothGattChannel bluetoothGattChannel = new BluetoothGattChannel . Builder ()
+        .setBluetoothGatt ( deviceMirror . getBluetoothGatt ())
+        .setPropertyType ( PropertyType . PROPERTY_READ )
+        .setServiceUUID ( serviceUUID ) _
         .setCharacteristicUUID(characteristicUUID)
         .setDescriptorUUID(descriptorUUID)
         .builder();
@@ -429,31 +429,31 @@ deviceMirror.readData();
 ```
 
 ## 总结
-从以上的描述中可以知道，设备相关的所有操作都统一交给 `ViseBle` 进行处理，并且该类是单例模式，全局只有一个，管理很方便。使用该库提供的功能前必须要调用 `ViseBle.getInstance().init(context);` 进行初始化。每连接成功一款设备都会在设备镜像池中添加一款设备镜像，该设备镜像是维护设备连接成功后所有操作的核心类，在断开连接时会将该设备镜像从镜像池中移除，如果连接设备数量超过配置的最大连接数，那么设备镜像池会依据 Lru 算法自动移除最近最久未使用设备并断开连接。`ViseBle`  中封装了几个常用的 API，如：开始扫描与停止扫描、连接与断开连接、清除资源等，该库提供的功能尽量简单易用，这也正是该项目的宗旨。
+From the above description, we can know that all operations related to the device are uniformly handed over to ` ViseBle` for processing, and this class is a singleton mode, there is only one globally, and the management is very convenient. Before using the functions provided by this library, you must call ` ViseBle.getInstance ( ) .init (context);` for initialization. Every time a device is successfully connected, a device image will be added to the device image pool. This device image is the core class for maintaining all operations after the device is successfully connected. When the connection is disconnected , the device image will be removed from the image pool. , if the number of connected devices exceeds the configured maximum number of connections, the device mirror pool will be based on Lru The algorithm automatically removes the device that has not been used for the longest time and disconnects it . Several commonly used APIs are encapsulated in ` ViseBle` , such as : start and stop scanning, connect and disconnect, clear resources, etc. The functions provided by this library are as simple and easy to use as possible, which is the purpose of this project .
 
-## 感谢
-在此要感谢两位作者提供的开源库[android-lite-bluetoothLE](https://github.com/litesuits/android-lite-bluetoothLE)和[Bluetooth-LE-Library---Android](https://github.com/alt236/Bluetooth-LE-Library---Android)，这两个开源库对于本项目的完成提供了很大的帮助。
+## thanks
+I would like to thank the two authors for their open source library [android-lite- bluetoothLE]( https://github.com/litesuits/android-lite-bluetoothLE) and [Bluetooth-LE-Library---Android](https://github.com/litesuits/android-lite-bluetoothLE ) ://github.com/alt236/Bluetooth-LE-Library---Android) , these two open source libraries have provided great help to the completion of this project .
 
-## 关于我
-[![Website](https://img.shields.io/badge/Website-huwei-blue.svg)](http://www.huwei.tech/)
+## about me
+[![ Website](https://img.shields.io/badge/Website-huwei-blue.svg)](http://www.huwei.tech/)
 
-[![GitHub](https://img.shields.io/badge/GitHub-xiaoyaoyou1212-blue.svg)](https://github.com/xiaoyaoyou1212)
+[![ GitHub](https://img.shields.io/badge/GitHub-xiaoyaoyou1212-blue.svg)](https://github.com/xiaoyaoyou1212)
 
-[![CSDN](https://img.shields.io/badge/CSDN-xiaoyaoyou1212-blue.svg)](http://blog.csdn.net/xiaoyaoyou1212)
+[![ CSDN](https://img.shields.io/badge/CSDN-xiaoyaoyou1212-blue.svg)](http://blog.csdn.net/xiaoyaoyou1212)
 
-## 最后
-如果觉得该项目有帮助，请点下Star，如果想支持作者的开源行动，请随意赞赏，赞赏通道如下：
+## last
+If you find this project helpful, please click Star . If you want to support the author's open source action , please feel free to appreciate it. The appreciation channel is as follows :
 
-![微信支付](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/wxpay.png)
+![ WeChat payment ](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/wxpay.png)
 
-您的支持是我开源的动力。
+Your support is my motivation for open source .
 
-如果有好的想法和建议，也欢迎Fork项目参与进来。使用中如果有任何问题和建议都可以进群交流，QQ群二维码如下：
+If you have good ideas and suggestions , the Fork project is also welcome to participate. If you have any questions and suggestions during use, you can enter the group for communication . The QR code of the QQ group is as follows :
 
-![QQ群](https://github.com/xiaoyaoyou1212/XSnow/blob/master/screenshot/qq_chat_first.png)
-(此群已满)
+![ QQ group ](https://github.com/xiaoyaoyou1212/XSnow/blob/master/screenshot/qq_chat_first.png)
+( This group is full )
 
-![QQ群](https://github.com/xiaoyaoyou1212/XSnow/blob/master/screenshot/qq_chat_second.png)
+![ QQ group ](https://github.com/xiaoyaoyou1212/XSnow/blob/master/screenshot/qq_chat_second.png)
 
 
 
