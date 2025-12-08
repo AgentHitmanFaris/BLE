@@ -1,10 +1,10 @@
 # BLE
 
-[![ Codacy Badge](https://api.codacy.com/project/badge/Grade/880ed281aff445f890766ccccbe81d7d)](https://www.codacy.com/app/xiaoyaoyou1212/BLE?utm_source=github.com&amp;utm_medium =referral&amp;utm_content=xiaoyaoyou1212/BLE&amp;utm_campaign=Badge_Grade) [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://github. com/xiaoyaoyou1212/BLE/blob/master/LICENSE) [![API](https://img.shields.io/badge/API-18%2B-brightgreen.svg?style=flat)](https:// android-arsenal.com/api?level=18)
+[![ Codacy Badge](https://api.codacy.com/project/badge/Grade/880ed281aff445f890766ccccbe81d7d)](https://www.codacy.com/app/xiaoyaoyou1212/BLE?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=xiaoyaoyou1212/BLE&amp;utm_campaign=Badge_Grade) [![License](https://img.shields.io/badge/License-Apache--2.0-green.svg)](https://github.com/xiaoyaoyou1212/BLE/blob/master/LICENSE) [![API](https://img.shields.io/badge/API-18%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=18)
 
-**Android BLE basic operation framework, based on callback, easy to operate. It includes functions such as scanning, multi-connection, broadcast packet parsing, service reading and writing, and notification . **
+**Android BLE basic operation framework, based on callback, easy to operate. It includes functions such as scanning, multi-connection, broadcast packet parsing, service reading and writing, and notification.**
 
-- ** Project address : ** [ https://github.com/xiaoyaoyou1212/BLE](https://github.com/xiaoyaoyou1212/BLE )
+- **Project address:** [https://github.com/xiaoyaoyou1212/BLE](https://github.com/xiaoyaoyou1212/BLE)
 
 - ** Project dependencies : ** `compile ' com.vise .xiaoyaoyou:baseble:2.0.6'`
 
@@ -52,13 +52,13 @@ Latest version update record
 -Add methods to obtain services, feature values, and attributes .
 
 ## Installation package download
-[ BLE_V2.0.6.apk]( https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/BLE_V2.0.6.apk)
+[BLE_V2.0.6.apk](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/BLE_V2.0.6.apk)
 
 ## code hosting
 [![ JCenter](https://img.shields.io/badge/JCenter-2.0.6-orange.svg)](https://jcenter.bintray.com/com/vise/xiaoyaoyou/baseble/2.0. 6/)
 
 ## FAQ
-[![ FAQ](https://img.shields.io/badge/FAQ-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-red.svg)] (https://github.com/xiaoyaoyou1212/BLE/blob/master/FAQ.md)
+[![FAQ](https://img.shields.io/badge/FAQ-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-red.svg)](https://github.com/xiaoyaoyou1212/BLE/blob/master/FAQ.md)
 
 ## Effect display
 ![ BLE effect ](https://github.com/xiaoyaoyou1212/BLE/blob/master/screenshot/screenshot.gif)
