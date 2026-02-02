@@ -3,6 +3,7 @@ import random
 import secrets
 import os
 import subprocess
+import argparse
 
 ATTENDANCE_FILE = "Attendance.md"
 OPERATIVES = [
@@ -22,13 +23,19 @@ def get_current_branch():
         return "unknown-branch"
 
 def main():
+    # Parse Arguments
+    parser = argparse.ArgumentParser(description="Update Attendance Log")
+    parser.add_argument("--action", default="Routine security audit log update.", help="Action Summary")
+    parser.add_argument("--classification", default="[INFO: SYSTEM STABLE]", help="Classification")
+    args = parser.parse_args()
+
     # Gather Data
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     operative_id = random.choice(OPERATIVES)
     branch = get_current_branch()
     commit = "PENDING"
-    action_summary = "Routine security audit log update."
-    classification = "[INFO: SYSTEM STABLE]"
+    action_summary = args.action
+    classification = args.classification
     signature = secrets.token_hex(4) # 4 bytes = 8 hex chars
 
     # Prepare Line
